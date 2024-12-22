@@ -14,7 +14,9 @@ extractDiags :: [String] -> [String]
 extractDiags l = top ++ bottom
   where
     n = length l
-    m = length (head l)
+    m = case l of
+        [] -> 0
+        (xh : _) -> length xh
     -- above the main diagonal (including it)
     top = [[l !! i !! (j + i) | i <- [0 .. min (n - 1) (m - 1 - j)]] | j <- [0 .. m - 1]]
     -- below the main diagonal (excluding it)
@@ -24,7 +26,9 @@ extractAntidiags :: [String] -> [String]
 extractAntidiags l = top ++ bottom
   where
     n = length l
-    m = length (head l)
+    m = case l of
+        [] -> 0
+        (xh : _) -> length xh
     -- above the main antidiagonal (including it)
     top = [[l !! i !! (j - i) | i <- [0 .. min (n - 1) j]] | j <- [m - 1, m - 2 .. 0]]
     -- below the main antdiagonal (excluding it)

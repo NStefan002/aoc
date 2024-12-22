@@ -1,21 +1,12 @@
 module D1.B (main) where
 
-import Data.List (sort)
-
-split :: Char -> String -> [String]
-split _ "" = []
-split c s = first : split c rest
-  where
-    first = takeWhile (/= c) s
-    rest = drop (length first + 1) s
-
 getOddIndexElements :: [Int] -> [Int]
 getOddIndexElements [] = []
-getOddIndexElements numbers = [x | (x, i) <- zip numbers [0 ..], odd i]
+getOddIndexElements numbers = [x | (x, i) <- zip numbers ([0 ..] :: [Int]), odd i]
 
 getEvenIndexElements :: [Int] -> [Int]
 getEvenIndexElements [] = []
-getEvenIndexElements numbers = [x | (x, i) <- zip numbers [0 ..], even i]
+getEvenIndexElements numbers = [x | (x, i) <- zip numbers ([0 ..] :: [Int]), even i]
 
 calculateSimilarityScore :: [Int] -> [Int] -> Int
 calculateSimilarityScore [] _ = 0

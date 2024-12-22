@@ -9,7 +9,9 @@ result' on (h : t)
     | what == "don't()" = result' False t
     | otherwise = if on then ((read (h !! 1) :: Int) * (read (h !! 2) :: Int)) + result' on t else result' on t
   where
-    what = head h
+    what = case h of
+        [] -> ""
+        (hh : _) -> hh
 
 result :: [[String]] -> Int
 result = result' True

@@ -5,7 +5,9 @@ findA :: [String] -> [(Int, Int)]
 findA l = [(i, j) | i <- [1 .. n - 2], j <- [1 .. m - 2], l !! i !! j == 'A']
   where
     n = length l
-    m = length (head l)
+    m = case l of
+        [] -> 0
+        (xh : _) -> length xh
 
 -- checks if the 'A' at (i, j) can form an X with 'M's and 'S's
 isX :: (Int, Int) -> [String] -> Bool
