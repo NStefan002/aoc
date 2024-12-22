@@ -1,3 +1,5 @@
+module D4.A (main) where
+
 import Text.Regex.TDFA
 
 numOfMatches :: [String] -> Int

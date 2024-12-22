@@ -1,3 +1,5 @@
+module D3.A (main) where
+
 import Text.Regex.TDFA
 
 main :: IO ()

@@ -1,3 +1,5 @@
+module D4.B (main) where
+
 -- returns the coordinates of all the 'A's, doesn't check for the 'A's on the edges (because those 'A's can't form an X)
 findA :: [String] -> [(Int, Int)]
 findA l = [(i, j) | i <- [1 .. n - 2], j <- [1 .. m - 2], l !! i !! j == 'A']

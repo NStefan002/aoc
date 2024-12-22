@@ -1,3 +1,5 @@
+module D3.B (main) where
+
 import Text.Regex.TDFA
 
 result' :: Bool -> [[String]] -> Int

@@ -1,5 +1,6 @@
+module D1.A (main) where
+
 import Data.List (sort)
-import System.IO
 
 split :: Char -> String -> [String]
 split _ "" = []
