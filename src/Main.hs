@@ -12,6 +12,9 @@ import qualified D3.B
 import qualified D4.A
 import qualified D4.B
 
+import qualified D5.A
+import qualified D5.B
+
 import qualified D7.A
 import qualified D7.B
 
@@ -29,6 +32,8 @@ main = do
         "3b" -> D3.B.main
         "4a" -> D4.A.main
         "4b" -> D4.B.main
+        "5a" -> D5.A.main
+        "5b" -> D5.B.main
         "7a" -> D7.A.main
         "7b" -> D7.B.main
         _ -> putStrLn "Invalid choice"
