@@ -18,6 +18,9 @@ import qualified D5.B
 import qualified D7.A
 import qualified D7.B
 
+import qualified D8.A
+import qualified D8.B
+
 main :: IO ()
 main = do
     putStrLn "Choose a solution to run:"
@@ -36,4 +39,6 @@ main = do
         "5b" -> D5.B.main
         "7a" -> D7.A.main
         "7b" -> D7.B.main
+        "8a" -> D8.A.main
+        "8b" -> D8.B.main
         _ -> putStrLn "Invalid choice"
